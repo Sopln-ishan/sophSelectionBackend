@@ -22,7 +22,6 @@ app.use((req, res, next) => {
 });
 
 // Routes
-console.log("Got to routes");
 app.use("/api", contactRoute);
 
 // Connect to MongoDB

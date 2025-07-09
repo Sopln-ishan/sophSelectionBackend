@@ -14,7 +14,6 @@ contactRoute.get("/", (req, res) => {
 });
 
 // A post method for the contact route
-console.log("Got to contact route post method");
 contactRoute.post("/", createContact);
 
 module.exports = contactRoute;

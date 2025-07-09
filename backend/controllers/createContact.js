@@ -7,6 +7,8 @@ const Contact = require("../models/contactModel");
 // Handle post request to create a new contact
 const createContact = async (req, res) => {
 
+  console.log("Received request to create contact:", req.body);
+
   const {
     name,
     roll,
@@ -25,7 +27,7 @@ const createContact = async (req, res) => {
       roll,
       phone,
       email,
-      subteam,
+      subteam: subteam[0],
       involvements,
       hours,
       skills,
