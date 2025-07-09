@@ -22,7 +22,7 @@ app.use((req, res, next) => {
 });
 
 // Routes
-app.use("/api", contactRoute);
+app.use("/api/secretary-selection", contactRoute);
 
 // Connect to MongoDB
 mongoose
