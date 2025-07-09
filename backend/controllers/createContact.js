@@ -6,11 +6,7 @@ const Contact = require("../models/contactModel");
 
 // Handle post request to create a new contact
 const createContact = async (req, res) => {
-  console.log("Received request to create contact:", req.body);
-  res.setHeader("Access-Control-Allow-Origin", "http://localhost:3001");
-  res.setHeader("Access-Control-Allow-Methods", "POST, GET, OPTIONS");
-  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
-  
+
   const {
     name,
     roll,

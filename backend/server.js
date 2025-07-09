@@ -2,12 +2,19 @@
 require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
+const cors = require("cors");
 
 const app = express();
 // Local Module
 const contactRoute = require("./routes/contactRoute");
 
 // Middleware
+app.use(
+  cors({
+    origin: "https://sophomore-contact-form-frontend.vercel.app/",
+    methods: "POST, GET, OPTIONS",
+  })
+);
 app.use(express.json());
 app.use((req, res, next) => {
   console.log(req.url, req.method);
